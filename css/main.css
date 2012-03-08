@@ -1,0 +1,303 @@
+/* General */
+
+body {
+	background: url('../images/dark-wood.png') fixed;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 14px;
+}
+
+h1, h2, dl, p {
+	margin: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/* Outer container */
+
+#outer {
+	max-width: 960px;
+	margin: 0 auto;
+	padding-top: 10px;
+}
+
+/* Header */
+
+header {
+	overflow: auto;
+}
+
+header h1 {
+	margin: 0;
+	float: left;
+	border: 2px dashed #fff;
+	padding: 0 15px;
+	font-size: 60px;
+	font-weight: 100;
+	text-shadow: 1px 1px #222;
+	color: #fff;
+}
+
+header h1 span {
+	font-weight: 200;
+	color: #8b4513;
+}
+
+nav ul {
+	float: right;
+	margin: 0;
+	margin-top: 34px;
+}
+
+nav li {
+	display: inline;
+	list-style-type: none;
+	margin-left: 10px;
+}
+
+nav a {
+	color: #8b4513;
+	font-size: 30px;
+	font-weight: 100;
+	text-decoration: none;
+	padding: 8px 7px;
+}
+
+nav a:hover {
+	border-bottom: 2px dashed #fff;
+	padding-bottom: 6px;
+}
+
+nav a:active {
+	border: 2px dashed #fff;
+	padding: 6px 5px;
+}
+
+/* Inner containers */
+
+#inner,
+#under {
+	border: 10px solid #333;
+	padding: 30px;
+}
+
+#inner,
+#under,
+footer {
+	font-weight: 300;
+	line-height: 18px;
+}
+
+#inner {
+	margin-top: 18px;
+	border-bottom: none;
+	padding-bottom: 4px;
+	background: url('../images/white-texture.png');
+	color: #333;
+	text-shadow: 1px 1px 0 white;
+}
+
+/* Inner sections */
+
+#inner section h1 {
+	margin-top: 30px;
+	margin-bottom: 15px;
+	color: #fff;
+	font-size: 35px;
+	font-weight: 100;
+	text-shadow: none;
+	line-height: normal;
+}
+
+#inner section h1 span {
+	margin-left: -30px;
+	background: url('../images/dark-wood.png') fixed;
+	padding: 0 15px;
+}
+
+#inner section h2 {
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+#inner section img {
+	float: left;
+	margin-right: 20px;
+	margin-bottom: 15px;
+	border: 10px solid #333;
+}
+
+#inner section p {
+	text-align: justify;
+}
+
+/* Intro */
+
+#intro img {
+	float: right !important;
+	margin-right: 0 !important;
+	margin-left: 20px;
+}
+
+#intro h1 {
+	clear: none !important;
+	margin-top: 0 !important;
+	font-size: 56px !important;
+	font-weight: 200;
+	font-family: "Josephin Slab", cursive;
+}
+
+#intro a {
+	float: left;
+	margin-top: 15px;
+	margin-bottom: 60px;
+	padding: 8px 36px;
+	border: 4px solid #8b4513;
+	color: #fff;
+	text-shadow: none;
+	text-decoration: none;
+	font-size: 20px;
+	font-weight: 100;
+	background: url('../images/dark-wood.png') fixed;
+}
+
+#intro a:hover {
+	border: 4px dashed #333;
+}
+
+#intro a:active {
+	border: 4px dashed #fff;
+}
+
+/* Brewer */
+
+#brewer dl {
+	margin-bottom: 15px;
+}
+
+#brewer dt {
+	font-size: 18px;
+	font-style: italic;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+
+#brewer p {
+	clear: both;
+	-webkit-column-count: 2;
+	-moz-column-count: 2;
+	column-count: 2;
+	-webkit-column-gap: 15px;
+	-moz-column-gap: 15px;
+	column-gap: 15px;
+}
+
+/* Brewing */
+
+#brewing ol {
+	clear: both;
+	font-size: 16px;
+	font-weight: 500;
+}
+
+#brewing ol li {
+	margin-bottom: 8px;
+}
+
+#brewing ol span {
+	font-weight: 300;
+	font-size: 14px;
+	padding-left: 2px;
+}
+
+/* Photos */
+
+#photos img {
+	margin: 0 !important;
+	margin-right: -10px !important;
+}
+
+/* Back to top link */
+
+#to-top {
+	margin-top: 60px;
+	text-align: center;
+}
+
+#to-top a {
+	padding: 4px 16px;
+	border: 4px solid #8b4513;
+	border-bottom: none;
+	color: #fff;
+	text-shadow: none;
+	text-decoration: none;
+	font-size: 18px;
+	font-weight: 100;
+	background: url('../images/dark-wood.png') fixed;
+}
+
+#to-top a:hover {
+	border: 4px dashed #333;
+	border-bottom: none;
+}
+
+#to-top a:active {
+	border: 4px dashed #fff;
+	border-bottom: none;
+}
+
+/* Under inner */
+
+#under {
+	position: relative;
+	color: #fff;
+	text-shadow: none;
+	overflow: auto;
+}
+
+#under-bg {
+	position: absolute;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: url('../images/white-texture.png');
+	opacity: 0.15;
+}
+
+#under p {
+	-webkit-column-count: 3;
+	-moz-column-count: 3;
+	column-count: 3;
+}
+
+#signup-btn {
+	float: right;
+	margin-top: 15px;
+	padding: 8px 36px;
+	border-radius: 5px;
+	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#8b4513));
+	background: -moz-linear-gradient(top, #fff, #8b4513);
+	color: #000;
+	text-decoration: none;	
+}
+
+#signup-btn:hover {
+	background: -webkit-gradient(linear, left top, left bottom, from(#8b4513), to(#fff));
+	background: -moz-linear-gradient(top, #8b4513, #fff);
+}
+
+#signup-btn:active {
+	background: -webkit-gradient(linear, left top, left bottom, from(#8b4513), to(#aaa));
+	background: -moz-linear-gradient(top, #8b4513, #aaa);
+}
+
+/* Footer */
+
+footer {
+	text-align: center;
+	color: white;
+	margin: 20px 0;
+}
