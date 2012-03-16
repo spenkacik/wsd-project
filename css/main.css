@@ -3,7 +3,7 @@
 body {
 	background: url('../images/dark-wood.png') fixed;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	font-size: 14px;
+	font-size: 87.5%;
 }
 
 h1, h2, dl, p {
@@ -25,15 +25,17 @@ h1, h2, dl, p {
 /* Header */
 
 header {
-	overflow: auto;
+	margin-bottom: 18px;
+	text-align: center;
 }
 
 header h1 {
-	margin: 0;
 	float: left;
+	margin: 0;
+	display: inline;
 	border: 2px dashed #fff;
-	padding: 0 15px;
-	font-size: 60px;
+	padding: 0 15px; /* logo should not scale */
+	font-size: 4.5em;
 	font-weight: 100;
 	text-shadow: 1px 1px #222;
 	color: #fff;
@@ -53,15 +55,15 @@ nav ul {
 nav li {
 	display: inline;
 	list-style-type: none;
-	margin-left: 10px;
+	margin-left: 10px; /* cannot use percentage here as width of different words would cause inconsistent gaps in nav */
 }
 
 nav a {
 	color: #8b4513;
-	font-size: 30px;
+	font-size: 2.143em;
 	font-weight: 100;
 	text-decoration: none;
-	padding: 8px 7px;
+	padding: 8px 7px; /* cannot use % here as width of different words would cause inconsistent gaps in nav */
 }
 
 nav a:hover {
@@ -71,7 +73,7 @@ nav a:hover {
 
 nav a:active {
 	border: 2px dashed #fff;
-	padding: 6px 5px;
+	padding: 6px 5px; /* cannot use % here as width of different words would cause inconsistent gaps in nav */
 }
 
 /* Inner containers */
@@ -79,7 +81,7 @@ nav a:active {
 #inner,
 #under {
 	border: 10px solid #333;
-	padding: 30px;
+	padding: 30px 3.125%;
 }
 
 #inner,
@@ -90,7 +92,6 @@ footer {
 }
 
 #inner {
-	margin-top: 18px;
 	border-bottom: none;
 	padding-bottom: 4px;
 	background: url('../images/white-texture.png');
@@ -104,16 +105,16 @@ footer {
 	margin-top: 30px;
 	margin-bottom: 15px;
 	color: #fff;
-	font-size: 35px;
+	font-size: 2.5em;
 	font-weight: 100;
 	text-shadow: none;
 	line-height: normal;
 }
 
 #inner section h1 span {
-	margin-left: -30px;
+	margin-left: -3.5%;
 	background: url('../images/dark-wood.png') fixed;
-	padding: 0 15px;
+	padding: 0 1.6625%;
 }
 
 #inner section h2 {
@@ -121,11 +122,16 @@ footer {
 	margin-bottom: 10px;
 }
 
-#inner section img {
+section div {
 	float: left;
-	margin-right: 20px;
+	margin-right: 2.083333%;
 	margin-bottom: 15px;
 	border: 10px solid #333;
+}
+
+#inner section img {
+	max-width: 100%;
+	display: block;
 }
 
 #inner section p {
@@ -134,30 +140,36 @@ footer {
 
 /* Intro */
 
-#intro img {
-	float: right !important;
-	margin-right: 0 !important;
-	margin-left: 20px;
+#intro div {
+	float: right;
+	margin-left: 2.083333%;
+	width: 26.041667%;
 }
 
-#intro h1 {
-	clear: none !important;
-	margin-top: 0 !important;
-	font-size: 56px !important;
+#intro div img {
+	margin: 0;
+	border: none;
+}
+
+#inner #intro h1 {
+	clear: none;
+	margin-top: 0;
+	font-size: 4em;
 	font-weight: 200;
-	font-family: "Josephin Slab", cursive;
+	font-family: "Mr Dafoe", cursive;
+
 }
 
 #intro a {
 	float: left;
 	margin-top: 15px;
 	margin-bottom: 60px;
-	padding: 8px 36px;
+	padding: 10px 60px; /* button should not scale using % */
 	border: 4px solid #8b4513;
 	color: #fff;
 	text-shadow: none;
 	text-decoration: none;
-	font-size: 20px;
+	font-size: 1.65em;
 	font-weight: 100;
 	background: url('../images/dark-wood.png') fixed;
 }
@@ -172,12 +184,16 @@ footer {
 
 /* Brewer */
 
+#brewer div {
+	width:56.770833%;
+}
+
 #brewer dl {
 	margin-bottom: 15px;
 }
 
 #brewer dt {
-	font-size: 18px;
+	font-size: 1.286em;
 	font-style: italic;
 	font-weight: 600;
 	margin-bottom: 10px;
@@ -188,16 +204,26 @@ footer {
 	-webkit-column-count: 2;
 	-moz-column-count: 2;
 	column-count: 2;
-	-webkit-column-gap: 15px;
-	-moz-column-gap: 15px;
-	column-gap: 15px;
+	-webkit-column-gap: 20px;
+	-moz-column-gap: 20px;
+	column-gap: 20px;
+}
+
+/* Beans */
+
+#beans div {
+	width: 33.333333%;
 }
 
 /* Brewing */
 
+#brewing div {
+	width: 23.958333%;
+}
+
 #brewing ol {
 	clear: both;
-	font-size: 16px;
+	font-size: 1.143em;
 	font-weight: 500;
 }
 
@@ -207,15 +233,28 @@ footer {
 
 #brewing ol span {
 	font-weight: 300;
-	font-size: 14px;
-	padding-left: 2px;
+	font-size: 1em;
+	padding-left: .208333%;
 }
 
 /* Photos */
 
-#photos img {
-	margin: 0 !important;
-	margin-right: -10px !important;
+#inner #photos div {
+	margin: 0;
+	margin-right: -10px; /*should not scale using % as this is to eliminate double borders, which have px widths */
+	max-width: 100%;
+}
+
+#photo1 {
+	width: 20%;
+}
+
+#photo2, #photo3 {
+	width: 19%
+}
+
+#photo4 {
+	width: 35%;
 }
 
 /* Back to top link */
@@ -226,13 +265,13 @@ footer {
 }
 
 #to-top a {
-	padding: 4px 16px;
+	padding: 4px 20px; /* button should not scale using % */
 	border: 4px solid #8b4513;
 	border-bottom: none;
 	color: #fff;
 	text-shadow: none;
 	text-decoration: none;
-	font-size: 18px;
+	font-size: 1.286em;
 	font-weight: 100;
 	background: url('../images/dark-wood.png') fixed;
 }
@@ -268,30 +307,33 @@ footer {
 }
 
 #under p {
-	-webkit-column-count: 3;
-	-moz-column-count: 3;
-	column-count: 3;
+	-webkit-column-count: 2;
+	-moz-column-count: 2;
+	column-count: 2;
+	-webkit-column-gap: 20px;
+	-moz-column-gap: 20px;
+	column-gap: 20px;
 }
 
 #signup-btn {
 	float: right;
-	margin-top: 15px;
-	padding: 8px 36px;
-	border-radius: 5px;
-	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#8b4513));
-	background: -moz-linear-gradient(top, #fff, #8b4513);
-	color: #000;
-	text-decoration: none;	
+	margin-top: 30px;
+	padding: 10px 60px; /* button should not scale using % */
+	border: 4px solid #8b4513;
+	color: #fff;
+	text-shadow: none;
+	text-decoration: none;
+	font-size: 1.65em;
+	font-weight: 100;
+	background: url('../images/dark-wood.png') fixed;
 }
 
 #signup-btn:hover {
-	background: -webkit-gradient(linear, left top, left bottom, from(#8b4513), to(#fff));
-	background: -moz-linear-gradient(top, #8b4513, #fff);
+	border: 4px dashed #333;
 }
 
 #signup-btn:active {
-	background: -webkit-gradient(linear, left top, left bottom, from(#8b4513), to(#aaa));
-	background: -moz-linear-gradient(top, #8b4513, #aaa);
+	border: 4px dashed #fff;
 }
 
 /* Footer */
@@ -300,4 +342,198 @@ footer {
 	text-align: center;
 	color: white;
 	margin: 20px 0;
+}
+
+/* Media Queries
+=======================================================================*/
+
+/* Tablet Portrait Size to Standard 960 (devices and browsers) */
+@media screen and (min-width: 768px) and (max-width: 959px) {
+	header h1 {
+		float: none;
+		margin: 0 auto;
+		margin-bottom: 15px;
+	}
+	
+	nav ul {
+		clear: both;
+		float: none;
+		margin: 0;
+		margin-top: 20px;
+		padding: 0;
+		text-align: center;
+	}
+	
+	nav a:hover {
+		display: none;
+	}
+	
+	nav a:active {
+		display: none;
+	}
+
+	#inner p {
+		font-size: 1.1em;
+	}
+	
+	#intro a {
+		padding: 12px 55px;
+		font-size: 1.6em;
+	}
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	header h1 {
+		float: none;
+		margin: 0 auto;
+		margin-bottom: 15px;
+	}
+	
+	nav ul {
+		float: none;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+	}
+	
+	nav li {
+		display: block;
+		margin: 0;
+	}
+	
+	nav a {
+		font-size: 3em;
+		line-height: 60px;
+	}
+	
+	nav a:hover {
+		display: none;
+	}
+	
+	nav a:active {
+		display: none;
+	}
+
+	#inner p {
+		font-size: 1.2em;
+	}
+	
+	
+	#inner section div, #inner #photos {
+		display: none;
+		border: none;
+	}
+	
+	#inner #intro h1 {
+		font-size: 3.5em;
+	}	
+	
+	#intro a {
+		float: none;
+		padding: 14px 80px;
+		text-align: center;
+		font-size: 2em;
+		display: block;
+	}
+	
+	#brewer p {
+		-webkit-column-count: 1;
+		-moz-column-count: 1;
+		column-count: 1;
+	}
+	
+	#under p {
+		-webkit-column-count: 1;
+		-moz-column-count: 1;
+		column-count: 1;
+	}
+	
+	#under a {
+		float: none;
+		padding: 14px 80px;
+		text-align: center;
+		font-size: 2em;
+		display: block;
+	}	
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+	#inner, #under {
+		border-left: none;
+		border-right: none;
+	}
+	
+	header h1 {
+		float: none;
+		margin: 0 auto;
+		margin-bottom: 15px;
+	}
+	
+	nav ul {
+		float: none;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+	}
+	
+	nav li {
+		display: block;
+		margin: 0;
+	}
+
+	nav a {
+		font-size: 3em;
+		line-height: 60px;
+	}
+	
+	nav a:hover {
+		display: none;
+	}
+	
+	nav a:active {
+		display: none;
+	}
+
+	#inner p {
+		font-size: 1.2em;
+	}
+	
+	#inner section div, #inner #photos {
+		display: none;
+		border: none;
+	}
+	
+	#inner #intro h1 {
+		font-size: 2.6em;
+	}
+	
+	#intro a {
+		float: none;
+		padding: 14px 80px;
+		text-align: center;
+		font-size: 1.4em;
+		display: block;
+	}
+	
+	#brewer p {
+		-webkit-column-count: 1;
+		-moz-column-count: 1;
+		column-count: 1;
+	}
+	
+	#under p {
+		-webkit-column-count: 1;
+		-moz-column-count: 1;
+		column-count: 1;
+	}
+	
+	#under a {
+		float: none;
+		padding: 14px 80px;
+		text-align: center;
+		font-size: 2em;
+		display: block;
+	}
 }
