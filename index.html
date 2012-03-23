@@ -87,10 +87,56 @@
 		<!-- Under -->	
 		<div id="under">
 			<div id="under-bg"></div>
-			<p>Placeholder for sign-up form… Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent facilisis lacus in ante ullamcorper sit amet interdum ligula luctus. Vestibulum bibendum urna ac velit aliquam nec pretium turpis eleifend. Aenean non nunc nunc, et porta augue. Duis tempus consequat massa eu dignissim. Aliquam erat volutpat. Etiam vel sapien non augue interdum sagittis condimentum quis enim. Aliquam vitae ipsum nec mi eleifend consequat.
-
-Donec sed lacinia ipsum. Nam vel dui leo, quis semper lectus. Quisque mi erat, placerat tincidunt ultricies eu, blandit id augue. Duis viverra est vel risus suscipit id elementum massa vestibulum. Phasellus feugiat, dolor mollis accumsan dignissim, massa nisi consectetur diam, ac scelerisque quam lorem pellentesque libero. Duis elementum auctor turpis, eu adipiscing orci lobortis vel. Praesent a nisl purus, ac hendrerit dui. Fusce dictum metus in diam feugiat at ultricies eros imperdiet. Quisque dolor sem, dignissim vel consectetur vitae, ullamcorper ut mi. Nulla condimentum auctor magna eget commodo.</p>
-			<a href="" id="signup-btn">Sign up!</a>
+				<div id="table">
+					<h3>Membership Plans</h3>
+					<table>
+						<tr>
+							<th><span>Basic</span><br />Free</th>
+							<th id="premium-header" class="premium"><span>Premium</span><br />$10/month</th>
+						</tr>
+						<tr>
+							<td>E-mail Newsletter</td>
+							<td class="premium">E-mail Newsletter</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>Monthly Coffee Shipment</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>YouBrew Coffee Mug</td>
+						</tr>
+					</table>
+				</div>
+	
+			<div id="form">
+				<h3>Sign Up Now!</h3>
+				<div>
+					<form method="get" action="mailto:example@example.com">
+						<div>
+							<label for="name-first">First Name:</label>
+							<input type="text" name="name-first" id="name-first" />
+						</div>
+						<div>
+							<label for="name-last">Last Name:</label>
+							<input type="text" name="name-last" id="name-last" />
+						</div>
+						<div>
+							<label for="email">E-mail:</label>
+							<input type="text" name="email" id="email" />
+						</div>
+						<div>
+							<p>
+								<label for="agreement">Agreement:</label>
+								<input type="checkbox" name="agreement" id="agreement" />
+								<span>I agree to the <a href="">Terms and Conditions</a></span>
+							</p>
+						</div>
+						<input id="signup-btn" type="submit" value="Sign Up" />
+					</form>
+				</div>
+			</div>
+			<div class="clear"></div>
 		</div>
 		
 		<footer>
